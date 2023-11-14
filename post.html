@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Base de Conhecimento</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">Base de conhecimento</a>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>Configurações Iniciais</h1>
+                            <h2 class="subheading">Quando precisar configurar seu ambiente de dev em outro pc</h2>
+                            <span class="meta">
+                                Publicado 14 Novembro 2023
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <h2 class="section-heading">Instalação do VS Code</h2>
+                        <p>Existem duas maneiras de realizar o processo de instalação:</p>
+                        <ol>
+                            <li>Maneira convencional que estamos acostumados a instalar programas dependendo do sistema operacional</li>
+                            <li>Utilizando o suporte ao modo portátil.</li>
+                        </ol>
+                        <h2 class="section-heading">Instalação do VS Code no Windows através do modo convencional</h2>
+                        <p>Primeiramente realize o download do <a href="https://code.visualstudio.com/Download">assistente de instalação</a>, o processo de instalação é bem simples, basta seguir o modo padrão de instalação de programas no Windows (next, next, next, install).</p>
+                        <p>Porém tenha certeza que na segunda tela do assistente a opção “Adicione em PATH (disponível após reiniciar)” esteja marcada, dessa maneira será possível abrir o editor pelo terminal com o comando code. </p>
+                        <img class="img-fluid" src="https://dkrn4sk0rn31v.cloudfront.net/uploads/2021/01/tela-de-instala%C3%A7%C3%A3o-do-vs-code-no-windows.png" alt="..." />
+                        <h2 class="section-heading">Navegador + Extensão</h2>
+                        <ul>
+                            <li><a href="https://www.google.com/intl/pt-BR/chrome/">Google Chrome</a></li>
+                            <li><a href="https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=pt-BR&pli=1">uBlock Origin</a></li>
+                            <li><a href="https://chromewebstore.google.com/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=pt-br">ColorZilla</a></li>
+                            <li><a href="https://chromewebstore.google.com/detail/habitica-pomodoro-sitekee/iaanigfbldakklgdfcnbjonbehpbpecl?hl=pt-br"></a>Habitica</li>
+                            <li><a href="https://chromewebstore.google.com/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb"></a>Responsive Viewer</li>
+                            <li><a href="https://chromewebstore.google.com/detail/gmail-notifier-gmail-noti/ealojglnbikknifbgleaceopepceakfn">Gmail Notifier</a></li>
+                        </ul>
+                        <h2 class="section-heading">Extensões VScode</h2>
+                        <img class="img-fluid" src="https://oil-key-68a.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F60f3ffa1-f93e-449d-9d0e-374d38e39c05%2FFacebook-Visual-Studio-Code.webp?table=block&id=8d307e0f-68cf-4c01-8c84-5e1c9a2581da&spaceId=c99bef0a-be61-4a75-8de6-a04dd193d182&width=2000&userId=&cache=v2" alt="..." />
+                        <ul>
+                            <li><a href="https://github.com/tonsky/FiraCode">Fira Code</a></li>
+                            <li>ident-rainbow</li>
+                            <li>Live Server</li>
+                            <li>ESlint</li>
+                            <li>Dracula Official</li>
+                            <li>Color Highlight</li>
+                            <li>Auto Rename Tag</li>
+                        </ul>
+                        <h2 class="section-heading">Instalando o Node + NPM</h2>
+                        <p>A instalação do Node no Windows é relativamente simples, basta acessar o site oficial e fazer <a href="https://nodejs.org/en/">download do instalador</a>. Até a escrita deste artigo a versão Current do Node é 13.11.0.</p>
+                        <p>Execute o instalador, siga as instruções na tela e pronto, o Node está instalado e adicionado ao PATH do Windows. Feche todos os terminais abertos e você está pronto para prosseguir.</p>
+                        <p>Depois abra o terminal e digite os seguintes comandos: <br><code>node --version</code> e <code>npm --version</code> </p>
+                        
+                        <h2 class="section-heading">Instalando o Git</h2>
+                        <p>Primeiramente fazemos o download do instalador no site oficial, depois seguimos o passo a passo no pc:</p>
+                        <ol>
+                            <li>Criar uma pasta Dev</li>
+                            <li>Dentro dela uma pasta Git</li>
+                            <li>Dentro dela uma pasta Git</li>
+                            <li>Dentro dela uma pasta Git</li>
+                        </ol>
+                        <p>Agora vamos colar alguns códigos no terminal, primeiro vamos adicionar usuário e email:   (as aspas não fazem parte). 
+                            <br><code>git config --global user.name "seu-nome-no-git"</code>
+                            <br><code>git config --global user.email "seuemailgit@gmail.com"</code>
+                            <br><code>git config --global user.email seuemailgit@gmail.com</code>
+                            <br><code>git config --global credential.helper store</code>
+                        </p>
+                        Placeholder text by
+                            <a href="http://spaceipsum.com/">Space Ipsum</a>
+                            &middot; Images by
+                            <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website 2023</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
