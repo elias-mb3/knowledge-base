@@ -23,67 +23,74 @@
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="row" style="height: 40px;">
-            
-        </header>
-        <!-- Main Content-->
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="./pages/first-step.html">
-                            <h2 class="post-title">Configurações Iniciais</h2>
-                            <h3 class="post-subtitle">Quando precisar configurar seu ambiente de dev em outro pc.</h3>
-                        </a>
-                        <p class="post-meta">
-                            Publicado 14 Novembro 2023
-                        </p>
+        <header class="masthead">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>Documentação de API</h1>
+                            <h2 class="subheading">Nesse Artigo, vamos ver um pouco sobre a Lib Swagger e como ela pode criar uma documentação automática para seus projetos.</h2>
+                            <span class="meta">
+                                Publicado 16 Novembro 2023
+                            </span>
+                        </div>
                     </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="./pages/swagger.html"><h2 class="post-title">Documentação de API.</h2></a>
-                        <p class="post-meta">
-                            Publicado 16 Novembro 2023
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">Science has not yet mastered prophecy</h2>
-                            <h3 class="post-subtitle">We predict too much for the next year and yet far too little for the next ten.</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
-                            on August 24, 2023
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">Failure is not an option</h2>
-                            <h3 class="post-subtitle">Many say exploration is part of our destiny, but it’s actually our duty to future generations.</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
-                            on July 8, 2023
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
                 </div>
             </div>
-        </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <h2 class="section-heading">Installation</h2>
+                        <p><code>npm i swagger-ui-express swagger-autogen</code></p>
+                        <h2 class="section-heading">Create swagger.js</h2>
+                        <p>
+                            <pre>
+                                <code>
+    const swaggerAutogen = require('swagger-autogen')();
+
+    const doc = {
+        info: {
+            title: 'Minha API REST',
+            description: 'Description'
+        },
+        host: 'localhost:3000'
+        };
+                                    
+    const outputFile = './swagger-output.json';
+    const routes = ['./index.js'];
+                                    
+    swaggerAutogen(outputFile, routes, doc).then(() => {
+        require('./index.js'); 
+    });</code>
+                            </pre>
+                        </p>
+                        <h2 class="section-heading">Add to Index.js</h2>
+                        <p>
+                            <pre>
+                                <code>
+    const swaggerUi = require('swagger-ui-express');
+    const swaggerDocument = require('./swagger-output.json');
+                                    
+    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+                                </code>
+                            </pre>
+                        </p>
+                        <h2 class="section-heading">Command</h2>
+                        <p><code>node swagger.js</code></p>
+                        <h2 class="section-heading">Port</h2>
+                        <p><code>http://localhost:3000/api-docs/</code></p>
+                        <h2 class="section-heading">Instalando o Node + NPM</h2>
+                        <ul>
+                            <li><a href="https://www.npmjs.com/package/swagger-ui-express">Swagger UI Express</a></li>
+                            <li><a href="https://swagger-autogen.github.io/docs/getting-started/quick-start/">Swagger Autogen Documentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
         <!-- Footer-->
         <footer class="border-top">
             <div class="container px-4 px-lg-5">
