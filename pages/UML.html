@@ -28,10 +28,10 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="post-heading">
-                            <h1>Documentação de API</h1>
-                            <h2 class="subheading">Nesse Artigo, vamos ver um pouco sobre a Lib Swagger e como ela pode criar uma documentação automática para seus projetos.</h2>
+                            <h1>Criando Diagramas UML/h1>
+                            <h2 class="subheading">Three Schema Architecture + Diagramas UML</h2>
                             <span class="meta">
-                                Publicado 16 Novembro 2023
+                                Publicado 18 Novembro 2023
                             </span>
                         </div>
                     </div>
@@ -43,49 +43,19 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <h2 class="section-heading">Installation</h2>
-                        <p><code>npm i swagger-ui-express swagger-autogen</code></p>
-                        <h2 class="section-heading">Create swagger.js</h2>
-                        <p>
-                            <pre>
-                                <code>
-    const swaggerAutogen = require('swagger-autogen')();
-
-    const doc = {
-        info: {
-            title: 'Minha API REST',
-            description: 'Description'
-        },
-        host: 'localhost:3000'
-        };
-                                    
-    const outputFile = './swagger-output.json';
-    const routes = ['./index.js'];
-                                    
-    swaggerAutogen(outputFile, routes, doc).then(() => {
-        require('./index.js'); 
-    });</code>
-                            </pre>
-                        </p>
-                        <h2 class="section-heading">Add to Index.js</h2>
-                        <p>
-                            <pre>
-                                <code>
-    const swaggerUi = require('swagger-ui-express');
-    const swaggerDocument = require('./swagger-output.json');
-                                    
-    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-                                </code>
-                            </pre>
-                        </p>
-                        <h2 class="section-heading">Command</h2>
-                        <p><code>node swagger.js</code></p>
-                        <h2 class="section-heading">Port</h2>
-                        <p><code>http://localhost:3000/api-docs/</code></p>
-                        <h2 class="section-heading">Instalando o Node + NPM</h2>
+                        
+                        <img class="img-fluid" src="https://miro.medium.com/v2/resize:fit:981/1*Mld5pLhDxJcI_WYx1jab9w.png" alt="">
+                        <h2 class="section-heading">O que é um diagrama UML?</h2>
+                        <p>Diagrama UML, baseado na Linguagem de Modelagem Unificada, é uma ferramenta visual utilizada por desenvolvedores para compreender sistemas e softwares complexos.</p>
+                        <p>Esses diagramas simplificam a compreensão de projetos, arquitetura de código e propostas de implementação, facilitando a visualização de workflows e processos de negócios.</p>
+                        <p>Ao criar uma referência visual padronizada, o UML simplifica a compreensão de elementos conectados e hierarquias no código, proporcionando uma visão clara e rápida para engenheiros e outros stakeholders. Isso contribui para manter o controle das relações, facilitando a colaboração e evitando perdas nas complexidades da programação de software.</p>
+                        <h2 class="section-heading">Tipos de diagramas</h2>
+                        <img class="img-fluid" src="https://images.ctfassets.net/w6r2i5d8q73s/4AY5IBO42ZVWv6AB1qjPXW/08c1c11806298f0fc9d689125f0efabf/XS1_3_4_columns_template_thumbnails_UML_class_diagram_001" alt="">
+                        <h2  class="section-heading">Ferramentas</h2>
                         <ul>
-                            <li><a href="https://www.npmjs.com/package/swagger-ui-express">Swagger UI Express</a></li>
-                            <li><a href="https://swagger-autogen.github.io/docs/getting-started/quick-start/">Swagger Autogen Documentation</a></li>
+                            <li><a href="https://whimsical.com/my-files-WfERba8pp8m2UKk7yqq8ZX">WHIMSICAL</a></li>
+                            <li><a href="https://keep.google.com/u/1/">GOOGLE KEEP</a></li>
+                            <li><a href="https://app.diagrams.net/">DIAGRAMS</a></li>
                         </ul>
                     </div>
                 </div>
