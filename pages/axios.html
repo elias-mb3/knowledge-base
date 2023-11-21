@@ -13,76 +13,105 @@
         <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
     </head>
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.html">Base de conhecimento</a>
+                <a class="navbar-brand" href="./../index.html">Base de conhecimento</a>
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="row" style="height: 40px;">
-            
-        </header>
-        <!-- Main Content-->
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="./pages/first-step.html">
-                            <h2 class="post-title">Configurações Iniciais</h2>
-                            <h3 class="post-subtitle">Quando precisar configurar seu ambiente de dev em outro pc.</h3>
-                        </a>
-                        <p class="post-meta">
-                            Publicado 14 Novembro 2023
-                        </p>
+        <header class="masthead">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>Utilizar Axios para consumo de API</h1>
+                            <h2 class="subheading">Aprendendo a utilizar Axios para o consumo de API com HTTPS.</h2>
+                            <span class="meta">
+                                Publicado 21 Novembro 2023
+                            </span>
+                        </div>
                     </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="./pages/swagger.html">
-                            <h2 class="post-title">Documentação de API.</h2>
-                            <h3 class="post-subtitle">Como documentar suas APIs automaticamente com Swagger</h3>
-                        </a>
-                        <p class="post-meta">
-                            Publicado 16 Novembro 2023
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="./pages/UML.html">
-                            <h2 class="post-title">Criando Diagramas UML</h2>
-                            <h3 class="post-subtitle">Three Schema Architecture + Diagramas UML</h3>
-                        </a>
-                        <p class="post-meta">
-                            Publicado 18 Novembro 2023
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="./pages/axios.html">
-                            <h2 class="post-title">Utilizar Axios para consumo de API</h2>
-                            <h3 class="post-subtitle">Aprendendo a utilizar Axios para o consumo de API com HTTPS.</h3>
-                        </a>
-                        <p class="post-meta">
-                            Publicado 21 Novembro 2023
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
                 </div>
             </div>
-        </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <h2 class="section-heading">Installation</h2>
+                        <p>Rode os seguintes comandos:</p>
+                        <p>
+                            <pre>
+                                <code>
+    npm init
+    npm install
+    npm install axios
+                                </code>
+                            </pre>
+                        </p>
+                        <h2 class="section-heading">Add to Index.js</h2>
+                        <p>
+                            <pre>
+                                <code>
+    const axios = require('axios')
+
+    const url = "https://api.adviceslip.com/advice"
+                                    
+    async function getAdivice() {
+        axios.get(url)
+        .then(res => {
+            let advice = res.data.slip.advice;
+            console.log(`E a frase do dia é: ${advice}!`)
+        }
+        )
+        .catch(err =>{
+            console.log(err)
+        })
+        }
+        getAdivice()
+                                </code>
+                            </pre>
+                        </p>
+                        <h2 class="section-heading">Comparando com fetch</h2>
+                        <p>
+                            <pre>
+                                <code>
+    const url = "https://api.adviceslip.com/advice";
+
+    async function getAdvice() {
+        try {
+            const response = await fetch(url);
+                                            
+            if (!response.ok) {
+                throw new Error(`Erro na requisição: ${response.status}`);
+            }
+                                    
+            const data = await response.json();
+            const advice = data.slip.advice;
+                                    
+                console.log(`E a frase do dia é: ${advice}!`);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+                                    
+        getAdvice();
+                                </code>
+                            </pre>
+                        </p>
+                        <h2 class="section-heading">References</h2>
+                        <ul>
+                            <li><a href="https://www.javaguides.net/2020/08/reactjs-axios-get-post-put-and-delete-example-tutorial.html">CRUD Axios</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
         <!-- Footer-->
         <footer class="border-top">
             <div class="container px-4 px-lg-5">
